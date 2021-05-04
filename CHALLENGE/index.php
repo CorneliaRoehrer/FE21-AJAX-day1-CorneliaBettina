@@ -18,11 +18,11 @@
 
     <script>
     
-        document.getElementById("button").addEventListener("click", getUser, false); //create an eventlistener to call getUser() function when button clicked
+        document.getElementById("button").addEventListener("change", getUser, false); //create an eventlistener to call getUser() function when button clicked
 
         function getUser() {
             const request = new XMLHttpRequest(); //create new request
-            request.open( "GET", "user.php", true); //set request as a GET method connecting to user.php
+            request.open("GET", "user.php", true); //set request as a GET method connecting to user.php
             request.onload = function () {
                 if (this.status == 200) {
                     let user = JSON.parse(this.responseText); //data received is turned into JS objects
